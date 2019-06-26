@@ -1,14 +1,19 @@
 import React from 'react';
 
-const Spinner = () => {
+
+const Spinner = (props) => {
     return (
         
-        <div class="ui active inverted dimmer">
-          <div class="ui text loader">Allow us to read your location</div>
+        <div className="ui active inverted dimmer">
+          <div className="ui text loader">{props.message}</div>
         </div>
         
       
     );
+};
+
+Spinner.defaultProps = {
+  message: 'Loading...'
 };
 
 export default Spinner;
